@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Ayang Lutfi 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background video -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="assets/bg.mp4" type="video/mp4" />
+  </video>
+  <div class="overlay"></div>
+
+  <!-- Background slideshow untuk page 2 -->
+  <div id="bgSlides" class="hidden"></div>
+
+  <!-- Music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="assets/music.mp3" type="audio/mpeg" />
+    Browsermu tidak mendukung audio.
+  </audio>  
+
+  <!-- PAGE 1 -->
+  <section class="page show" id="page1">
+    <h1 class="fancy-font">Selamat Ulang Tahun<br>Lutfi Wafiq Nur Azizah 🎉</h1>
+    <p class="subtext">ada sesuatu nih buat yang spesial hari ini... ✨</p>
+    <button onclick="nextPage(2)">pencet sayang 💌</button>
+  </section>
+
+  <!-- PAGE 2 -->
+  <section class="page hidden" id="page2">
+    <h2>📸 Lihat Kenangan Kita nih wkwkw..lucu kan</h2>
+    <div class="gallery gallery-popup">
+      <img src="assets/kenangan1.jpg" alt="Kenangan 1" />
+      <img src="assets/kenangan2.jpg" alt="Kenangan 2" />
+      <img src="assets/kenangan3.jpg" alt="Kenangan 3" />
+      <img src="assets/kenangan4.jpg" alt="Kenangan 4" />
+      <img src="assets/kenangan5.jpg" alt="Kenangan 5" />
+      <img src="assets/kenangan6.jpg" alt="Kenangan 6" />
+      <img src="assets/kenangan7.jpg" alt="Kenangan 7" />
+      <img src="assets/kenangan8.jpg" alt="Kenangan 8" />
+      <img src="assets/kenangan9.jpg" alt="Kenangan 9" />
+    </div>
+    <button onclick="nextPage(3)">Lanjut ke pesan spesial 💕</button>
+  </section>  
+
+  <!-- NEW PAGE 3 (Video Page) -->
+  <section class="page hidden" id="page3">
+    <h2>🎥 Video Spesial Untuk Kamu</h2>
+    <div class="video-container">
+      <video controls class="special-video">
+        <source src="assets/special_video.mp4" type="video/mp4">
+        Browser kamu tidak mendukung video ini.
+      </video>
+    </div>
+    <p class="video-caption">Ini kenangan spesial kita yang aku buatkan untuk kamu ❤️</p>
+    <button onclick="nextPage(4)">Lanjut ke cerita kita</button>
+  </section>
+
+  <!-- PAGE 4 (Previously page 3) -->
+  <section class="page hidden" id="page4">
+    <h2>💖 Awal Ketemu</h2>
+    <p class="story">
+      Aku masih inget banget waktu pertama kali ketemu kamu...<br />
+      awalnya aku kaget, ini orang cuek amat. Bener sayang atau engga nih (dalam hatiku).<br />
+      sampek ada titik dimana aku bingung, mau ngajak ketemuan lagi tapi takut dicuekin.<br />
+      mau ga ketemu tapi kok makin penasaran. akhirnya yaudahlah next dicoba ketemu lagi.<br />
+      ternyata makin hari makin paham, kalau kamu emang orangnya pendiam (dikit tapi wkwk).<br />
+      dan akhirnya kamu lama kelamaan mulai mau bicara, dan sampai sekarang aku selalu nyaman kalau sama kamu.<br />
+      harapannya kamu selalu jadi orang favoritku yaa sayang. sehat selalu, lancar rezeki, dan betah dalam menghadapi orang lain.<br />
+      I LOVE YOU SAYANGKUUU...MWAAAHHH.
+    </p>
+    <button onclick="nextPage(5)">Sekarang giliran kamu 😊</button>
+  </section>
+
+  <!-- PAGE 5 (Previously page 4) -->
+  <section class="page hidden" id="page5">
+    <h2>📝 Ungkapan dari Kamu</h2>
+    <p>Tulis apa pun yang kamu mau sampaikan ke aku 💌</p>
+    <textarea id="pesanLutfi" placeholder="Tulis di sini ya..."></textarea>
+    <button onclick="kirimPesan()">Kirim ke kamu ❤️</button>
+    <p id="notif" class="hidden">Pesanmu udah terkirim ke aku 🥰</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
